@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  /* outline: none; */
+  font-family: "Nunito",sans-serif;
+  font-weight: 400;
+}
+
+html{
+  font-size: 62.5%
+  ;
+}
+
+/* navbar 1 */
+  .navbar{
+    width: 100%;
+    height: 14rem;
+    background-color: #000;
+    position: fixed;
+    top: -14rem;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.2rem 0.2rem 0.2rem #000;
+
+    /* menu選單動畫 */
+    transition: top 0.4s 0.2s;
+    /* 0.4s選單上升延遲  0.2s拉桿上升延遲*/
+  }
+
+  
+  .navbar.change{
+    top: 0;   /* menu選單動畫 */
+    transition: top 0.4s 0.2s;  
+    /* 0.4s選單下降延遲  0.2s選單下降延遲 */
+  }
+
+  .navbar-link{
+    color: white;
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    opacity: 0;   /* 隱藏圖標 */
+    transition: color 0.3, opacity 2s;
+  }
+
+  .navbar-link:hover{
+    color: #f3e247;
+  }
+
+  .navbar-link i{
+    font-size: 7rem;
+  }
+
+  .navbar-link span{
+    font-size: 2.5rem; 
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  /* 顯示圖標 */
+  .change .navbar-link{
+    opacity: 1;   
+  }
+
+  /* 圖標延遲 */
+  .change .navbar-link:nth-child(1) {
+    transition: opacity 0.4s 0.5s, color 0.3s;
+  }
+  
+  .change .navbar-link:nth-child(2) {
+    transition: opacity 0.4s 0.6s, color 0.3s;
+  }
+  
+  .change .navbar-link:nth-child(3) {
+    transition: opacity 0.4s 0.7s, color 0.3s;
+  }
+  
+  .change .navbar-link:nth-child(4) {
+    transition: opacity 0.4s 0.8s, color 0.3s;
+  }
+  
+  .change .navbar-link:nth-child(5) {
+    transition: opacity 0.4s 0.9s, color 0.3s;
+  }
+  /* 顯示圖標結束 */
+
+  .menu{
+    width: 4rem;
+    height: 6rem;
+    background-color: #000;
+    position: fixed;
+    top: 1rem;
+    left: 5rem;
+    border-radius: 30rem 30rem 15rem 15rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #000, -0.1rem -0.1rem 0.1rem #000;
+    cursor: pointer;
+
+    /* menu拉桿動畫 */
+    transition: top 0.4s 0.2s;
+         /* 0.4s拉桿上升延遲  0.2圖標延遲 */       
+  }
+
+  
+  .menu.change{
+    top: 15rem;   /* menu拉桿動畫 */
+    transition: top 0.4s;   /* 拉桿下降延遲 */
+  }
+
+  .menu::before{
+    content: "";
+    width: 0.5rem;
+    height: 17rem;
+    background-color: #000;
+    position: absolute;
+    top: -16rem;
+    left: calc(50% - 0.15rem);
+  }
+/* End navbar 1 */
+
+/* Section 1 */
+.section-1{
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.section-heading{
+  font-size: 10rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 10px 3px 1px  black;
+  text-align: center;
+  margin-bottom: 5rem;
+  /* outline: 2px solid red; */
+}
+
+.section-1_icons i {
+  font-size: 25rem;
+  color: #f3e247;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s;
+}
+
+.section-1_icons i.change {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s 0.3s;
+}
+/* End Section 1 */
+
+/* Section 2 */
+.section-2{
+  width: 100%;
+  height: 100vh;
+  background-color: #a09b9b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 0;
+}
+
+.card-container{
+  /* outline: 2px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card{
+  width: 30rem;
+  background-color: #f3e247;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1rem 1rem 1rem black;
+  margin-top: 1rem;
+  position: relative;
+  transform: rotateY(30deg) skewX(-2deg);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover{
+  transform: rotateY(30deg) skewX(-2deg);
+  box-shadow: 2rem 2rem 2rem #000;
+}
+
+.card::before{
+  content: "";
+  width: 1rem;
+  height: 100%;
+  background-color: #cabb37;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.1rem -0.1rem 0.1rem #00000050;
+}
+
+.card::after{
+  content: "";
+  width: 100%;
+  height: 1rem;
+  background-color: #cabb37;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  box-shadow: -0.1rem -0.1rem 0.1rem #00000050;
+}
+
+.card-img{
+  /* outline: 2px solid red; */
+  width: 100%;
+}
+
+.card-name{
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+.card-btn{
+  width: 70%;
+  /* height: 2.5rem; */
+  background-color: #000;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  border-radius: 5rem;
+  margin-top: 2rem;
+  border: none;
+  padding: 0.3rem;
+  cursor: pointer;
+  
+}
+
+/* End Section 2 */
+
+/* Section 3 */
+.section-3{
+  /* width: 100%;
+  height: 100vh; */
+  background-color: #333;
+  padding: 5rem 0;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  /* margin-top: 10rem; */
+  /* outline: 2px solid red; */
+}
+
+.gallery-link{
+  position: relative;
+  padding: 4rem 1rem;
+  /* outline: 2px solid red; */
+}
+
+.gallery-link::before{
+  content: "";
+  width: 0.2rem;
+  height: 0;  /* 隱藏設為0 */
+  position: absolute;
+  top: 4vw;
+  left: 80%;
+  background-color: #fff;
+  transition: height 0.5s;
+  z-index: 5;
+}
+
+.gallery-link::after{
+  content: "";
+  width: 0;  /* 隱藏設為0 */
+  height: 0.2rem;
+  position: absolute;
+  top: 7vw;
+  left: 10%;
+  background-color: #fff;
+  transition: width 0.5s;
+  z-index: 5;
+}
+
+.gallery-link:hover:before{
+  height: 60%;
+}
+
+.gallery-link:hover:after{
+  width: 80%;
+}
+
+.food-img{
+  width: 24vw;
+  height: 17vw;
+  object-fit: cover;
+  box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 
+  0.5rem 0.5rem 0.1rem #a2e946,
+    0.7rem 0.7rem 0.1rem #297ce9, 
+    0.9rem 0.9rem 0.1rem #e92999;
+  /* outline: 2px solid red; */
+  transition: all 0.5s;
+}
+
+.gallery-link:hover .food-img{
+  box-shadow: 1rem 1rem 0.1rem #e92929, 
+    2rem 2rem 0.1rem #a2e946,
+    3rem 3rem 0.1rem #297ce9, 
+    4rem 4rem 0.1rem #e92999;
+  transform: scale(1.1);
+  filter: blur(0.5rem);
+  opacity: 0.5;
+}
+
+.food-name{
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  color: #fff;
+  position: absolute;
+  top: 5.5rem;
+  left: 3rem;
+
+  /* 隱藏food-name */
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.gallery-link:hover .food-name {
+  width: 100%;
+  transition: width 1.5s 0.5s;
+}
+
+.food-description{
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-align: left;
+  line-height: 3rem;
+  color: #fff;
+  position: absolute;
+  bottom: 7rem;
+  left: 2rem;
+  width: 70%;
+
+  /* 隱藏food-description */
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.gallery-link:hover .food-description {
+  opacity: 1;
+  visibility: visible;
+  transition: 1.5s 0.5s;
+}
+/* End Section 3 */
+
+/* Section 4 */
+.section-4{
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  background-color: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 3rem 0;
+  position: relative;
+  
+}
+
+.section-4-text{
+  text-transform: uppercase;
+  
+}
+
+.section-4-heading{
+  font-size: 5rem;
+  color: white;
+  padding: 1rem 0;
+  
+}
+
+.section-4-paragraph{
+  font-size: 1.3rem;
+  color: white;
+}
+
+.signup-form{
+  display: flex;
+  align-items: center;
+  height: 15vh;
+  
+}
+
+.signup-form-input {
+  width: 35rem;
+  height: 5rem;
+  padding: 1rem;
+  border: 0.2rem solid #a79a2d;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: #a79a2d;
+}
+
+.signup-form-input::placeholder {
+  color: #f3e247;
+}
+
+.signup-form-btn {
+  position: relative;
+  left: -4.5rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #333;
+  color: #f3e247;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.copyright{
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  color: white;
+  position: absolute;
+  bottom: 3rem;
+  border-top: 0.1rem solid #888;
+  padding-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+/* End Section 4 */
+
+/* RWD */
+@media(max-width: 1000px){
+  html{
+    font-size: 50%;
+  }
+
+  .section-heading{
+    font-size: 10rem;
+  }
+
+  .navbar-link i {
+    font-size: 5rem;
+  }
+}
+
+@media(max-width: 800px){
+
+  .section-heading{
+    font-size: 8rem;
+  }
+
+  .navbar-link i {
+    font-size: 4rem;
+  }
+
+  .section-4-heading{
+    font-size: 3rem;
+  }
+
+  .section-4-paragraph {
+    font-size: 0.9rem;
+  }
+
+  .signup-form-input {
+    width: 30rem;
+    height: 3rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+
+  .signup-form-btn{
+    left: -2.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media(max-width: 650px){
+
+  .section-heading{
+    font-size: 6rem;
+  }
+
+  .navbar-link i {
+    font-size: 3rem;
+  }
+
+  .navbar-link span{
+    font-size: 1rem;
+  }
+
+  .section-2{
+    height: 80vh;
+  }
+
+  .card{
+    width: 20rem;
+  }
+
+}
+
+@media(max-width: 560px){
+  html {
+    font-size: 40%;
+  }
+
+  .navbar-link {
+    margin: 0 2rem;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .card{
+    margin: 2rem 0;
+  }
+
+  .section-2 {
+    height: 130vh;
+  }
+
+  .food-img {
+    width: 50vw;
+    height: 30vw;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+    
+  .section-4 {
+    height: 30rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .section-4-text {
+    margin-bottom: 1rem;
+  }
+}
