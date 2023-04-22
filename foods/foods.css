@@ -591,3 +591,8 @@ html{
   }
 }
 
+@media(max-width: 375px){
+  .section-2{
+    height: 120vh;
+  }
+}
