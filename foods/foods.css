@@ -588,6 +588,10 @@ html{
 
 @media(max-width: 400px){
   .section-2 {
-    height: 140vh;
+    height: 145vh;
+  }
+  
+  .section-heading{
+    padding: 0 1rem;
   }
 }
