@@ -550,20 +550,20 @@ html{
     margin: 0 2rem;
   }
 
-  .card-container {
+  /* .card-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
-  }
+    
+  } */
 
   .card{
     margin: 2rem 0;
   }
 
   .section-2 {
-    height: 250vh;
+    height: 100vh;
   }
 
   .food-img {
