@@ -478,6 +478,10 @@ html{
   .navbar-link i {
     font-size: 5rem;
   }
+  
+  .card-container{
+    marrgin-bottom: 11rem;
+  }
 }
 
 @media(max-width: 800px){
