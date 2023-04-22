@@ -478,9 +478,10 @@ html{
   .navbar-link i {
     font-size: 5rem;
   }
-  
+
   .card-container{
-    marrgin-bottom: 11rem;
+    align-items: center;
+    height: 100vh;
   }
 }
 
@@ -559,8 +560,6 @@ html{
 
   .card{
     margin: 2rem 0;
-    width: 18rem;
-    height: 25rem;
   }
 
   .section-2 {
