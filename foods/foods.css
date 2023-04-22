@@ -585,3 +585,9 @@ html{
     margin-bottom: 1rem;
   }
 }
+
+@media(max-width: 400px){
+  .section-2 {
+    height: 140vh;
+  }
+}
