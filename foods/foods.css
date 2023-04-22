@@ -587,8 +587,8 @@ html{
 }
 
 @media(max-width: 300px){
-  .section-2 {
-    height: 1450vh;
+  .card-container {
+    height: 70%;
   }
   
   .section-heading{
