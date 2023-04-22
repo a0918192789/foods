@@ -586,12 +586,3 @@ html{
   }
 }
 
-@media(max-width: 400px){
-  .card-container {
-    height: -200rem;
-  }
-  
-  .section-heading{
-    padding: 0 1rem;
-  }
-}
